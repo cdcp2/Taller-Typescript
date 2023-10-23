@@ -1,8 +1,8 @@
 import {Serie} from './Serie.js';
 import { series } from './data.js';
 
-let component: HTMLElement = document.getElementById('series')!;
-let avgcomponent: HTMLElement = document.getElementById('promedio')!;
+const component: HTMLElement = document.getElementById('series')!;
+const avgcomponent: HTMLElement = document.getElementById('promedio')!;
 
 series.forEach(c => createRow(c));
 avgcomponent.innerHTML = `Seasons average: ${avg()}`;
