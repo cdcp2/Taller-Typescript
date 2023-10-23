@@ -8,8 +8,8 @@ series.forEach(c => createRow(c));
 avgcomponent.innerHTML = `Seasons average: ${avg()}`;
 
 function createRow(serie: Serie):void{
-    let fila = document.createElement('tr');
-    fila.innerHTML = (`
+    const row = document.createElement('tr');
+    row.innerHTML = (`
     <td style = "font-weight: bold;"> 
         ${serie.id}
     </td>
@@ -22,7 +22,7 @@ function createRow(serie: Serie):void{
     <td>
         ${serie.seasons}
     </td>`);
-    component.appendChild(fila);
+    component.appendChild(row);
 }
 
 function avg(): string{
